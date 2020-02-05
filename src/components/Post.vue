@@ -11,6 +11,9 @@
           <p>{{ post.body }}</p>
         </div>
       </div>
+      <div class="post-additional">
+        <p>{{ post.body }}</p>
+      </div>
       <div class="post-comments-show">
         <span v-show="!display" v-on:click="getComments"
           >Открыть комментарии</span
@@ -140,10 +143,6 @@ $break-small: 480px;
     display: flex;
 
     &-image {
-      @media screen and (max-width: $break-small) {
-        width: 100px;
-        height: 100px;
-      }
     }
 
     &-information {
@@ -160,10 +159,25 @@ $break-small: 480px;
     &-information > h1 {
       margin: 0;
       font-size: 1.5rem;
+      font-weight: 400;
     }
 
     &-information > p {
       margin: 0;
+      @media screen and (max-width: $break-small) {
+        display: none;
+      }
+    }
+  }
+
+  &-additional {
+    display: none;
+    @media screen and (max-width: $break-small) {
+      display: block;
+    }
+
+    & > p {
+      margin: 0.5rem 0;
     }
   }
 

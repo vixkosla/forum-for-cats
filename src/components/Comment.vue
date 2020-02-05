@@ -58,12 +58,13 @@ export default {
     &-name > h2 {
       margin: 0;
       font-size: 1.2rem;
+      margin-right: 0.5rem;
       display: inline-block;
+      font-weight: 400;
     }
 
     &-name > span {
       color: grey;
-      margin-left: 1rem;
     }
   }
 }
